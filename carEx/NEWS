@@ -1,0 +1,7 @@
+Version 0.1-0
+
+ o Initial version of the package.
+ 
+Version 0.2-0
+
+ o Added gspline(), wald(), panel.fit(), and some associated functions.
