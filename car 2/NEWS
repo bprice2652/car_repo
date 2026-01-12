@@ -1,3 +1,12 @@
+Changes to Version 3.1-5
+
+  o New maintainer and updated information
+
+Changes to Version 3.1-5
+
+  o New maintainer and updated information
+  
+
 Changes to Version 3.1-4
 
   o Fixed bugs in powerTransformation using the bcnPower family.  New results may differ slightly from former results.

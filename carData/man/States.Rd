@@ -45,7 +45,7 @@
       }
     \item{dollars}{
        State spending on public education, 
-      in \$1000s per student.
+      in $1000s per student.
       }
     \item{pay}{
        Average teacher's salary in the state, 

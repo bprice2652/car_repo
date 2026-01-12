@@ -1,10 +1,10 @@
 Package: car
-Version: 3.1-4
-Date: 2025-05-18
+Version: 3.1-5
+Date: 2026-01-05
 Title: Companion to Applied Regression
-Authors@R: c(person("John", "Fox", role = c("aut", "cre"), email = "jfox@mcmaster.ca"),
+Authors@R: c(person("John", "Fox", role ="aut" , email = "jfox@mcmaster.ca"),
 	person("Sanford", "Weisberg", role = "aut", email = "sandy@umn.edu"),
-	person("Brad", "Price", role = "aut", email = "brad.price@mail.wvu.edu"),
+	person("Brad", "Price", role = c("aut", "cre"), email = "brad.price@mail.wvu.edu"),
     person("Daniel", "Adler", role="ctb"),
     person("Douglas", "Bates", role = "ctb"),
     person("Gabriel", "Baud-Bovy", role = "ctb"),
@@ -43,43 +43,7 @@ Description:
   Functions to Accompany J. Fox and S. Weisberg, 
   An R Companion to Applied Regression, Third Edition, Sage, 2019.
 License: GPL (>= 2)
-URL: https://r-forge.r-project.org/projects/car/,
+URL: https://github.com/bprice2652/car_repo,
         https://CRAN.R-project.org/package=car,
-        https://www.john-fox.ca/Companion/index.html
+        https://z.umn.edu/carbook
 VignetteBuilder: knitr
-Author: John Fox [aut, cre],
-  Sanford Weisberg [aut],
-  Brad Price [aut],
-  Daniel Adler [ctb],
-  Douglas Bates [ctb],
-  Gabriel Baud-Bovy [ctb],
-  Ben Bolker [ctb],
-  Steve Ellison [ctb],
-  David Firth [ctb],
-  Michael Friendly [ctb],
-  Gregor Gorjanc [ctb],
-  Spencer Graves [ctb],
-  Richard Heiberger [ctb],
-  Pavel Krivitsky [ctb],
-  Rafael Laboissiere [ctb],
-  Martin Maechler [ctb],
-  Georges Monette [ctb],
-  Duncan Murdoch [ctb],
-  Henric Nilsson [ctb],
-  Derek Ogle [ctb],
-  Iain Proctor [ctb],
-  Brian Ripley [ctb],
-  Tom Short [ctb],
-  William Venables [ctb],
-  Steve Walker [ctb],
-  David Winsemius [ctb],
-  Achim Zeileis [ctb],
-  R-Core [ctb]
-Maintainer: John Fox <jfox@mcmaster.ca>
-Repository: R-Forge
-Repository/R-Forge/Project: car
-Repository/R-Forge/Revision: 773
-Repository/R-Forge/DateTimeStamp: 2025-05-19 16:17:41
-Date/Publication: 2025-05-19 16:17:41
-NeedsCompilation: no
-Packaged: 2025-05-19 16:24:23 UTC; rforge
