@@ -26,7 +26,7 @@ The observations are respondents to U.S. General Social Surveys, 1972-2016.
 \source{
  National Opinion Research Center
  \emph{General Social Survey.} 
- GSS Cumulative Datafile 1972-2016, downloaded from \url{http://gss.norc.org/}.
+ GSS Cumulative Datafile 1972-2016, downloaded from \url{https://gss.norc.org/}.
 }
 
 \references{
