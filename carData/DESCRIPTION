@@ -1,6 +1,6 @@
 Package: carData
 Version: 3.0-6
-Date: 2026-01-05
+Date: 2026-01-30
 Title: Companion to Applied Regression Data Sets
 Authors@R: c(person("John", "Fox", role = "aut", email = "jfox@mcmaster.ca"),
 	person("Sanford", "Weisberg", role = "aut", email = "sandy@umn.edu"),

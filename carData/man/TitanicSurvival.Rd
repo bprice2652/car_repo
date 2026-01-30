@@ -31,7 +31,7 @@
 }
 
 \references{
-  \url{https://www.encyclopedia-titanica.org/}
+  \url{https://www.encyclopedia-titanica.org}
   
   F. E. Harrell, Jr. (2001)
   \emph{Regression Modeling Strategies}
