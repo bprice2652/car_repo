@@ -30,7 +30,7 @@ located in Africa.}
 
 \source{
 All data were collected from UN tables accessed at \url{http://unstats.un.org/unsd/demographic/products/socind/}
-on April 23, 2012. OECD membership is from \url{https://www.oecd.org}, accessed
+on April 23, 2012. OECD membership is from https://www.oecd.org, accessed
 May 25, 2012.
 }
 

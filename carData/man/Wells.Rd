@@ -33,7 +33,7 @@
 }
 
 \source{
-  \url{https://www.stat.columbia.edu/~gelman/arm/examples/arsenic/wells.dat}.
+  https://www.stat.columbia.edu/~gelman/arm/examples/arsenic/wells.dat.
 }
 
 \references{
