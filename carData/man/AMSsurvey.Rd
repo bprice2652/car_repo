@@ -29,7 +29,7 @@ These data are produced yearly by the American Math Society.
 }
 \source{
 From the now defunct "https://www.ams.org/employment/surveyreports.html"
-Supplementary Table 4 in the 2008-09 data.  See \url{https://www.ams.org/profession/data/annual-survey/docsgrtd} for more recent data.
+Supplementary Table 4 in the 2008-09 data.  See https://www.ams.org/profession/data/annual-survey/docsgrtd for more recent data.
 }
 \references{
  Fox, J. and Weisberg, S. (2019) 
