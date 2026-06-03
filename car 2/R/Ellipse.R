@@ -31,7 +31,11 @@
 # 2023-09-03: fix formula method using Formula::as.Formula. JF
 # 2023-09-03: test formula method & label.pos. MF
 # 2023-09-16: tweak code, add label.xpd arg. JF
-# 2024-05-14: has.intercept() -> has_intercept(). JF
+# 2026-05-21: fix duplicate-cex bug in label.ellipse call. M. Friendly
+#   - added cex as explicit formal arg to label.ellipse() (was passed only via ...)
+#   - pass cex explicitly to text() in label.ellipse body
+#   - at call site, filter cex from ... before do.call(label.ellipse, ...) to prevent
+#     "formal argument 'cex' matched by multiple actual arguments" error in text.default()
 
 ellipse <- function(center, shape, radius, log="", center.pch=19, center.cex=1.5, segments=51, draw=TRUE, add=draw, 
 		xlab="", ylab="", col=carPalette()[2], lwd=2, fill=FALSE, fill.alpha=0.3,
@@ -91,8 +95,8 @@ dataEllipse.default <- function(x, y, groups,
     ...) {
  
 #   copied from heplots::label.ellipse
-    label.ellipse <- function(ellipse, label, col="black", 
-                            label.pos=NULL, xpd=FALSE, 
+    label.ellipse <- function(ellipse, label, col="black",
+                            label.pos=NULL, xpd=FALSE, cex=NULL,  # MF: added cex
                             tweak=0.5*c(strwidth("M"), strheight("M")), ...){
     
     ellipse <- as.matrix(ellipse)
@@ -151,7 +155,7 @@ dataEllipse.default <- function(x, y, groups,
       pos <- 4 - floor(4*(index-1)/nrow(ellipse))
     }
     
-    text(x, y, label, pos=pos, xpd=xpd, col=col, ...)
+    text(x, y, label, pos=pos, xpd=xpd, col=col, cex=cex, ...)  # MF: cex now explicit
   }
   
   
@@ -267,8 +271,11 @@ dataEllipse.default <- function(x, y, groups,
 
         if (!missing(ellipse.label)) {
             lab <- if (length(ellipse.label) < i) ellipse.label[1] else ellipse.label[i]
-            label.ellipse(result[[i]], lab, col[2], label.pos = label.pos, cex = label.cex, 
-                          xpd=label.xpd, ...)      # MF
+            dots <- list(...)
+            dots[["cex"]] <- NULL  # MF: remove cex from ... before call; it is passed explicitly below
+            do.call(label.ellipse, c(list(result[[i]], lab, col[2]),
+                                     list(label.pos=label.pos, cex=label.cex, xpd=label.xpd),
+                                     dots))
         }
     }
     if (missing(labels)) labels <- seq(length(x))
@@ -372,7 +379,7 @@ confidenceEllipse.lm <- function(model, which.coef, vcov.=vcov, L, levels=0.95, 
 		which.coef <- if(length(coefficients(model)) == 2) c(1, 2)
 				else{
 					if (missing(which.coef)){
-						if (has_intercept(model)) c(2,3) else c(1, 2)
+						if (has.intercept(model)) c(2,3) else c(1, 2)
 					} else which.coef
 				}
 		coef <- coefficients(model)[which.coef]
@@ -411,7 +418,7 @@ confidenceEllipse.default <- function(model, which.coef, vcov.=vcov, L, levels=0
 		which.coef <- if(length(coefficients(model)) == 2) c(1, 2)
 				else{
 					if (missing(which.coef)){
-						if (has_intercept(model)) c(2, 3) else c(1, 2)
+						if (has.intercept(model)) c(2, 3) else c(1, 2)
 					} else which.coef
 				}
 		coef <- coefficients(model)[which.coef]
