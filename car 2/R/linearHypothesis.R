@@ -529,7 +529,7 @@ coef.multinom <- function(object, ...){
 linearHypothesis.merMod <- function(model, hypothesis.matrix, rhs=NULL,
                                  vcov.=NULL, test=c("Chisq", "F"), 
                                  singular.ok=FALSE, verbose=FALSE, ...){
-    linearHypothesis.mer(model=model, hypothesis.matrix=hypothesis.matrix,
+    linearHypothesis.mer(model=model, hypothesis.matrix=hypothesis.matrix, rhs=rhs,
                          vcov.=vcov., test=test, singular.ok=singular.ok,
                          verbose=verbose, ...)
 }
