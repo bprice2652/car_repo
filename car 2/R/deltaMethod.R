@@ -152,7 +152,7 @@ deltaMethod.coxph <- function(object, g., vcov. = vcov(object, complete=FALSE),
 
 deltaMethod.merMod <- function(object, g., vcov. = vcov(object, complete=FALSE),
                             parameterNames = names(fixef(object)), ..., envir=parent.frame()) {
-    deltaMethod.mer(object=object, g.=g., vcov.=vcov, 
+    deltaMethod.mer(object=object, g.=g., vcov.=vcov., 
                        parameterNames=parameterNames, ..., envir=envir)
 }
     
