@@ -379,7 +379,7 @@ confidenceEllipse.lm <- function(model, which.coef, vcov.=vcov, L, levels=0.95, 
 		which.coef <- if(length(coefficients(model)) == 2) c(1, 2)
 				else{
 					if (missing(which.coef)){
-						if (has.intercept(model)) c(2,3) else c(1, 2)
+						if (has_intercept(model)) c(2,3) else c(1, 2)
 					} else which.coef
 				}
 		coef <- coefficients(model)[which.coef]
@@ -418,7 +418,7 @@ confidenceEllipse.default <- function(model, which.coef, vcov.=vcov, L, levels=0
 		which.coef <- if(length(coefficients(model)) == 2) c(1, 2)
 				else{
 					if (missing(which.coef)){
-						if (has.intercept(model)) c(2, 3) else c(1, 2)
+						if (has_intercept(model)) c(2, 3) else c(1, 2)
 					} else which.coef
 				}
 		coef <- coefficients(model)[which.coef]
